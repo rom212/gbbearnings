@@ -1,0 +1,42 @@
+.container {
+  /* background-color: red; */
+  width: 20rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem 1rem;
+  border-right: solid 1px white;
+}
+
+.sectionTitle {
+  margin-bottom: 4rem;
+  align-self: center;
+}
+
+.container form input {
+  background-color: transparent;
+  display: block;
+  margin-bottom: 2rem;
+  border: solid 1px white;
+  border-radius: 4px;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.container form input[type="file"] {
+  border: none;
+}
+
+.container form input[type="submit"]:hover {
+  background-color: white;
+  color: #282c34;
+  font-weight: 600;
+}
+
+.container form label {
+  background-color: transparent;
+  display: block;
+  margin-bottom: 0.25rem;
+}
