@@ -25,6 +25,16 @@ function Outputs(props) {
 
 export default Outputs;
 
+function postProcessValue(attribute, value) {
+  if (attribute === "q_growth" || attribute === "a_growth") {
+    return value * 100 + "%";
+  } else if (attribute === "q_revenue" || attribute === "a_revenue") {
+    return "$" + value + "B";
+  } else {
+    return value;
+  }
+}
+
 function ResultLine(props) {
   const { result } = props;
   const attribute = result[0];
@@ -32,7 +42,8 @@ function ResultLine(props) {
 
   return (
     <li>
-      <span>{lookups[attribute]}</span> <span>{value}</span>
+      <span>{lookups[attribute]}</span>{" "}
+      <span>{postProcessValue(attribute, value)}</span>
     </li>
   );
 }

@@ -14,7 +14,7 @@ function Inputs(props) {
   const fetchCompletion = async (encodedImages) => {
     const aoaiClient = new OpenAI({
       apiKey: apiKey,
-      baseURL: endpoint,
+      baseURL: endpoint + "openai/deployments/gpt-4o",
       defaultQuery: { "api-version": "2024-10-21" },
       defaultHeaders: { "api-key": apiKey },
       dangerouslyAllowBrowser: true,
